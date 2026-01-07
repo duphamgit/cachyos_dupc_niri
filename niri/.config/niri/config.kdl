@@ -35,10 +35,10 @@ output "HDMI-A-2" {
 // Màn hình PHỤ (EGM22) - Đặt ở dưới
 output "DP-1" {
     // Lưu ý: Nếu ở bước trước bạn dùng transform "180", hãy giữ lại nó ở đây
-    transform "180" 
-    
+    transform "180"
+
     mode "1920x1080@100.0"
-    
+
     // x=0 để hai màn hình thẳng hàng lề trái
     // y=1080 để nó nằm ngay dưới màn hình LG
     position x=0 y=1080
@@ -55,7 +55,7 @@ binds {
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: fuzzel" { spawn-sh "fuzzel"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
-    
+
     // Please choose your own file manager
     MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
 
@@ -98,8 +98,8 @@ binds {
     MOD+SHIFT+RIGHT                     { focus-monitor-right; }
     MOD+UP                        		{ focus-monitor-up; }
 	MOD+DOWN                        	{ focus-monitor-down; }
-	    
-    
+
+
     MOD+SHIFT+CTRL+LEFT                 { move-column-to-monitor-left; }
     MOD+SHIFT+CTRL+RIGHT                { move-column-to-monitor-right; }
     MOD+SHIFT+CTRL+UP                   { move-column-to-monitor-up; }
@@ -141,7 +141,7 @@ binds {
     MOD+CTRL+8                          { move-column-to-workspace 8; }
     MOD+CTRL+9                          { move-column-to-workspace 9; }
 
-   
+
     // ─── Layout Controls ───
     MOD+CTRL+F                          { expand-column-to-available-width; }
     MOD+C                               { center-column; }
@@ -179,7 +179,8 @@ binds {
     spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
     spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
     spawn-sh-at-startup "waybar" // Launch waybar
-
+    // Sửa dòng này: Thêm env để tránh lỗi Wayland và gom lệnh vào một chuỗi
+    spawn-sh-at-startup "env QT_QPA_PLATFORM=xcb openrgb --profile Amber"
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
 

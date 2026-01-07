@@ -1,0 +1,210 @@
+    OpenRGB v0.9+ (1.0rc2)
+    Commit:  from 
+    Launched: 20260107_181921
+====================================================================================================
+
+53    |Info:    [ResourceManager] Saving detector settings
+54    |Info:    [ResourceManager] Initializing HID interfaces: Success
+54    |Info:    ------------------------------------------------------
+54    |Info:    |               Start device detection               |
+54    |Info:    ------------------------------------------------------
+60    |Info:    ------------------------------------------------------
+60    |Info:    |             Detecting I2C interfaces               |
+60    |Info:    ------------------------------------------------------
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-3 Device 0000:0000 Subsystem: 0000:0000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-10 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-1 Device 0000:0000 Subsystem: 0000:0000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-8 Device 8086:4680 Subsystem: 1458:D000
+60    |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-15 Device 0000:0000 Subsystem: 0000:0000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-6 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-13 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-4 Device 0000:0000 Subsystem: 0000:0000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-11 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-2 Device 0000:0000 Subsystem: 0000:0000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-9 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-16 Device 8086:7A23 Subsystem: 1458:5001
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-7 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-14 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-5 Device 0000:0000 Subsystem: 0000:0000
+60    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-12 Device 8086:4680 Subsystem: 1458:D000
+60    |Info:    ------------------------------------------------------
+60    |Info:    |               Detecting I2C devices                |
+60    |Info:    ------------------------------------------------------
+477   |Info:    ------------------------------------------------------
+477   |Info:    |            Detecting I2C DIMM modules              |
+477   |Info:    ------------------------------------------------------
+543   |Info:    [ResourceManager] Detected occupied slot 2, bus 12, type Key: Left Control
+604   |Info:    [ResourceManager] Detected occupied slot 4, bus 12, type Key: Left Control
+604   |Info:    ------------------------------------------------------
+604   |Info:    |               Detecting I2C PCI devices            |
+604   |Info:    ------------------------------------------------------
+608   |Info:    ------------------------------------------------------
+608   |Info:    |               Detecting HID devices                |
+608   |Info:    ------------------------------------------------------
+733   |Info:    [B760M AORUS ELITE AX] Registering RGB controller
+734   |Info:    ------------------------------------------------------
+734   |Info:    |            Detecting libusb HID devices            |
+734   |Info:    ------------------------------------------------------
+745   |Info:    ------------------------------------------------------
+745   |Info:    |              Detecting other devices               |
+745   |Info:    ------------------------------------------------------
+751   |Info:    [ResourceManager] Calling Post-detection callbacks
+751   |Info:    ------------------------------------------------------
+751   |Info:    |                Detection completed                 |
+751   |Info:    ------------------------------------------------------
+40725 |Info:    [ResourceManager] Initializing HID interfaces: Success
+40725 |Warning: [ResourceManager] Detection coroutine: assigned a new coroutine when one was already scheduled - probably two rescan events sent at once
+40725 |Info:    ------------------------------------------------------
+40725 |Info:    |               Start device detection               |
+40725 |Info:    ------------------------------------------------------
+40734 |Info:    ------------------------------------------------------
+40734 |Info:    |             Detecting I2C interfaces               |
+40734 |Info:    ------------------------------------------------------
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-3 Device 0000:0000 Subsystem: 0000:0000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-10 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-1 Device 0000:0000 Subsystem: 0000:0000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-8 Device 8086:4680 Subsystem: 1458:D000
+40734 |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-15 Device 0000:0000 Subsystem: 0000:0000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-6 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-13 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-4 Device 0000:0000 Subsystem: 0000:0000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-11 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-2 Device 0000:0000 Subsystem: 0000:0000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-9 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-16 Device 8086:7A23 Subsystem: 1458:5001
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-7 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-14 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-5 Device 0000:0000 Subsystem: 0000:0000
+40734 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-12 Device 8086:4680 Subsystem: 1458:D000
+40734 |Info:    ------------------------------------------------------
+40734 |Info:    |               Detecting I2C devices                |
+40734 |Info:    ------------------------------------------------------
+41145 |Info:    ------------------------------------------------------
+41145 |Info:    |            Detecting I2C DIMM modules              |
+41145 |Info:    ------------------------------------------------------
+41151 |Info:    [ResourceManager] Detected occupied slot 2, bus 12, type Key: Left Control
+41152 |Info:    [ResourceManager] Detected occupied slot 4, bus 12, type Reserved
+41169 |Info:    ------------------------------------------------------
+41169 |Info:    |               Detecting I2C PCI devices            |
+41169 |Info:    ------------------------------------------------------
+41173 |Info:    ------------------------------------------------------
+41173 |Info:    |               Detecting HID devices                |
+41173 |Info:    ------------------------------------------------------
+41294 |Info:    [B760M AORUS ELITE AX] Registering RGB controller
+41294 |Info:    ------------------------------------------------------
+41294 |Info:    |            Detecting libusb HID devices            |
+41294 |Info:    ------------------------------------------------------
+41297 |Info:    ------------------------------------------------------
+41297 |Info:    |              Detecting other devices               |
+41297 |Info:    ------------------------------------------------------
+41303 |Info:    [ResourceManager] Calling Post-detection callbacks
+41303 |Info:    ------------------------------------------------------
+41303 |Info:    |                Detection completed                 |
+41303 |Info:    ------------------------------------------------------
+60217 |Info:    [ResourceManager] Initializing HID interfaces: Success
+60217 |Warning: [ResourceManager] Detection coroutine: assigned a new coroutine when one was already scheduled - probably two rescan events sent at once
+60217 |Info:    ------------------------------------------------------
+60217 |Info:    |               Start device detection               |
+60217 |Info:    ------------------------------------------------------
+60226 |Info:    ------------------------------------------------------
+60226 |Info:    |             Detecting I2C interfaces               |
+60226 |Info:    ------------------------------------------------------
+60226 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-3 Device 0000:0000 Subsystem: 0000:0000
+60226 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-10 Device 8086:4680 Subsystem: 1458:D000
+60226 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-1 Device 0000:0000 Subsystem: 0000:0000
+60226 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-8 Device 8086:4680 Subsystem: 1458:D000
+60226 |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-15 Device 0000:0000 Subsystem: 0000:0000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-6 Device 8086:4680 Subsystem: 1458:D000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-13 Device 8086:4680 Subsystem: 1458:D000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-4 Device 0000:0000 Subsystem: 0000:0000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-11 Device 8086:4680 Subsystem: 1458:D000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-2 Device 0000:0000 Subsystem: 0000:0000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-9 Device 8086:4680 Subsystem: 1458:D000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-16 Device 8086:7A23 Subsystem: 1458:5001
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-7 Device 8086:4680 Subsystem: 1458:D000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-14 Device 8086:4680 Subsystem: 1458:D000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-5 Device 0000:0000 Subsystem: 0000:0000
+60227 |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-12 Device 8086:4680 Subsystem: 1458:D000
+60227 |Info:    ------------------------------------------------------
+60227 |Info:    |               Detecting I2C devices                |
+60227 |Info:    ------------------------------------------------------
+60642 |Info:    ------------------------------------------------------
+60642 |Info:    |            Detecting I2C DIMM modules              |
+60642 |Info:    ------------------------------------------------------
+60649 |Info:    [ResourceManager] Detected occupied slot 2, bus 12, type Key: Left Control
+60649 |Info:    [ResourceManager] Detected occupied slot 4, bus 12, type Reserved
+60665 |Info:    ------------------------------------------------------
+60665 |Info:    |               Detecting I2C PCI devices            |
+60665 |Info:    ------------------------------------------------------
+60670 |Info:    ------------------------------------------------------
+60670 |Info:    |               Detecting HID devices                |
+60670 |Info:    ------------------------------------------------------
+60790 |Info:    [B760M AORUS ELITE AX] Registering RGB controller
+60790 |Info:    ------------------------------------------------------
+60790 |Info:    |            Detecting libusb HID devices            |
+60790 |Info:    ------------------------------------------------------
+60794 |Info:    ------------------------------------------------------
+60794 |Info:    |              Detecting other devices               |
+60794 |Info:    ------------------------------------------------------
+60799 |Info:    [ResourceManager] Calling Post-detection callbacks
+60799 |Info:    ------------------------------------------------------
+60799 |Info:    |                Detection completed                 |
+60799 |Info:    ------------------------------------------------------
+101117|Info:    [ResourceManager] Initializing HID interfaces: Success
+101117|Warning: [ResourceManager] Detection coroutine: assigned a new coroutine when one was already scheduled - probably two rescan events sent at once
+101117|Info:    ------------------------------------------------------
+101117|Info:    |               Start device detection               |
+101117|Info:    ------------------------------------------------------
+101126|Info:    ------------------------------------------------------
+101126|Info:    |             Detecting I2C interfaces               |
+101126|Info:    ------------------------------------------------------
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-3 Device 0000:0000 Subsystem: 0000:0000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-10 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-1 Device 0000:0000 Subsystem: 0000:0000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-8 Device 8086:4680 Subsystem: 1458:D000
+101126|Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-15 Device 0000:0000 Subsystem: 0000:0000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-6 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-13 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-4 Device 0000:0000 Subsystem: 0000:0000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-11 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-2 Device 0000:0000 Subsystem: 0000:0000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-9 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-16 Device 8086:7A23 Subsystem: 1458:5001
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-7 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-14 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-5 Device 0000:0000 Subsystem: 0000:0000
+101126|Info:    [ResourceManager] Registering I2C interface: /dev/i2c-12 Device 8086:4680 Subsystem: 1458:D000
+101126|Info:    ------------------------------------------------------
+101126|Info:    |               Detecting I2C devices                |
+101126|Info:    ------------------------------------------------------
+101545|Info:    ------------------------------------------------------
+101545|Info:    |            Detecting I2C DIMM modules              |
+101545|Info:    ------------------------------------------------------
+101552|Info:    [ResourceManager] Detected occupied slot 2, bus 12, type Key: Left Control
+101552|Info:    [ResourceManager] Detected occupied slot 4, bus 12, type Key: Left Control
+101552|Info:    ------------------------------------------------------
+101552|Info:    |               Detecting I2C PCI devices            |
+101552|Info:    ------------------------------------------------------
+101556|Info:    ------------------------------------------------------
+101556|Info:    |               Detecting HID devices                |
+101556|Info:    ------------------------------------------------------
+101675|Info:    [B760M AORUS ELITE AX] Registering RGB controller
+101675|Info:    ------------------------------------------------------
+101675|Info:    |            Detecting libusb HID devices            |
+101675|Info:    ------------------------------------------------------
+101680|Info:    ------------------------------------------------------
+101680|Info:    |              Detecting other devices               |
+101680|Info:    ------------------------------------------------------
+101685|Info:    [ResourceManager] Calling Post-detection callbacks
+101685|Info:    ------------------------------------------------------
+101685|Info:    |                Detection completed                 |
+101685|Info:    ------------------------------------------------------
+106921|Info:    [ProfileManager] Profile loading: FAILED! for B760M AORUS ELITE AX @ HID: /dev/hidraw2
