@@ -34,11 +34,11 @@ cd "$DOTFILES_DIR"
 for pkg in "${PACKAGES[@]}"; do
     if [ -d "$pkg" ]; then
         echo "🔹 Đang xử lý: $pkg"
-        
+
         # Xóa thư mục/file cũ để tránh xung đột
         rm -rf "$HOME/.config/$pkg"
         mkdir -p "$HOME/.config"
-        
+
         # Chạy lệnh Stow
         stow "$pkg"
     else

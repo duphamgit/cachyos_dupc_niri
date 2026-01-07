@@ -177,7 +177,8 @@ binds {
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-    spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
+    // Lệnh để Waypaper tự động đặt lại hình nền cũ
+    spawn-sh-at-startup "waypaper --restore"
     spawn-sh-at-startup "waybar" // Launch waybar
     // Sửa dòng này: Thêm env để tránh lỗi Wayland và gom lệnh vào một chuỗi
     spawn-sh-at-startup "env QT_QPA_PLATFORM=xcb openrgb --profile Amber"
