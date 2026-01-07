@@ -44,7 +44,7 @@
     //     }
     // },
     "custom/hint": {
-        "format": "Super + Q: Close | Super + Space: Search App | Super + F: Search File | Super + ~: Terminal",
+        "format": "Super + Q: Close | Super + Space: Search App | Super + T: Terminal",
         "interval": "once",
         "tooltip": false
     },
@@ -232,7 +232,7 @@
 	"persistent-workspaces": {
         "*": 5 // Luôn hiển thị 5 workspace trên tất cả màn hình
         // Hoặc liệt kê cụ thể: "1": [], "2": [], "3": [], "4": [], "5": []
-	}	
+	}
     },
     "custom/power": {
         "format" : "⏻ ",
@@ -247,4 +247,3 @@
 		}
     }
 }
-
