@@ -1,0 +1,138 @@
+/* Tổng thể font chữ */
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+/* Thanh Bar chính - Hiệu ứng kính mờ */
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.6); /* Tối hơn và trong suốt hơn */
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+/* Module tên cửa sổ (#window) */
+#window {
+    background: rgba(255, 255, 255, 0.1); 
+    color: #ffffff; 
+    border-radius: 8px;
+    padding: 2px 15px;
+    margin: 5px 10px;
+    font-weight: 600;
+}
+
+/* Các phím Workspace - Hiện đại hơn */
+#workspaces button {
+    padding: 0 10px;
+    color: #565f89; /* Màu chữ mờ khi không dùng */
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid #7aa2f7; /* Đường gạch xanh tinh tế */
+}
+
+#workspaces button.occupied {
+    color: #bb9af7;
+}
+
+/* Cấu hình chung cho tất cả các module bên phải (Right Modules) */
+#clock, #battery, #cpu, #memory, #disk, #temperature, 
+#network, #pulseaudio, #tray, #power-profiles-daemon {
+	background: rgba(255, 255, 255, 0.1); /* Nền cực nhẹ để lộ màu nền Waybar */
+    color: #f8f8f2; /* Chữ trắng sáng */
+    border-radius: 15px; 
+    padding: 0 12px;
+    margin: 4px 3px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Viền mảnh như kính */
+}
+
+/* Tùy chỉnh màu sắc tinh tế cho từng module (Không dùng màu quá rực) */
+/* Màu mặc định cho các module */
+/* Cấu hình chung cho cả 3 module */
+/* Thiết lập chung cho CPU, RAM, HDD */
+#cpu, #memory, #disk {
+    padding: 0 12px;
+    margin: 4px;
+    color: #ffffff; /* Chữ luôn màu trắng */
+    border-radius: 10px; /* Bo góc cho giống thanh dung lượng */
+    transition: all 0.5s ease; /* Hiệu ứng mượt mà khi đổi số */
+}
+
+/* 0-30%: Xanh lá (Green) */
+#cpu.green, #memory.green, #disk.green {
+    background: linear-gradient(to top, #2ecc71 0%, #2ecc71 30%, rgba(255,255,255,0.1) 30%);
+}
+
+/* 31-60%: Vàng (Yellow) */
+#cpu.yellow, #memory.yellow, #disk.yellow {
+    background: linear-gradient(to top, #f1c40f 0%, #f1c40f 60%, rgba(255,255,255,0.1) 60%);
+}
+
+/* 61-90%: Cam (Orange) */
+#cpu.orange, #memory.orange, #disk.orange {
+    background: linear-gradient(to top, #e67e22 0%, #e67e22 90%, rgba(255,255,255,0.1) 90%);
+}
+
+/* 91-100%: Đỏ (Red) */
+#cpu.red, #memory.red, #disk.red {
+    background: linear-gradient(to top, #e74c3c 0%, #e74c3c 100%, rgba(255,255,255,0.1) 100%);
+}
+
+#battery {
+    color: #9ece6a; /* Xanh lá dịu */
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+#battery.charging {
+    color: #e0af68; /* Màu vàng cát khi sạc */
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f7768e;
+    color: #ffffff;
+    animation: blink 0.5s steps(12) infinite alternate;
+}
+
+#pulseaudio {
+    color: #e0af68;
+}
+
+#network {
+    color: #7dcfff;
+}
+
+#clock {
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hiệu ứng Hover - Tạo cảm giác phản hồi tốt */
+#cpu:hover, #memory:hover, #pulseaudio:hover, #clock:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Tray hệ thống */
+#tray {
+    margin-right: 10px;
+}
+
+/* Animatioin cho Pin yếu */
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #f7768e;
+    }
+}
+
+/* Hint & Others */
+#custom-hint {
+    color: #7aa2f7;
+    padding: 0 10px;
+}
