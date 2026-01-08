@@ -52,7 +52,7 @@ binds {
 
     // ─── Applications ───
     MOD+T                     			hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
-    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: fuzzel" { spawn-sh "fuzzel"; }
+    Mod+SPACE                           hotkey-overlay-title="Open App Launcher: rofi" { spawn "rofi" "-show" "drun" "-show-icons"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
 

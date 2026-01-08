@@ -1,0 +1,53 @@
+/*******************************************************************************
+ * MINIMAL_FILE.RASI - Tối giản cho danh sách file
+ *******************************************************************************/
+
+* {
+    bg: #0a0a0a;
+    fg: #888888;
+    accent: #00ff9f; /* Một chút màu xanh lá hacker làm điểm nhấn */
+    
+    background-color: transparent;
+    text-color:       @fg;
+    font: "JetBrains Mono 12";
+}
+
+window {
+    width:            900px;
+    background-color: @bg;
+    border:           1px;
+    border-color:     #222222;
+    padding:          30px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    margin: 0 0 20px 0;
+}
+
+prompt {
+    text-color: @accent;
+    content: ">";
+}
+
+entry {
+    text-color: #ffffff;
+}
+
+listview {
+    lines: 12;
+    spacing: 5px;
+}
+
+element {
+    padding: 10px;
+}
+
+element selected {
+    background-color: #1a1a1a;
+    text-color:       @accent;
+}
+
+element-text {
+    text-color: inherit;
+}

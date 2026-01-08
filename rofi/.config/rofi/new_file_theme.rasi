@@ -1,0 +1,73 @@
+/*******************************************************************************
+ * NEW_FILE_THEME.RASI - FILE BROWSER MODE
+ *******************************************************************************/
+
+configuration {
+    show-icons: false;
+}
+
+* {
+    bg-window:      #111216;
+    bg-card:        #1a1b26;
+    accent:         #00d2ff;
+    fg-main:        #ffffff;
+    fg-dim:         #565f89;
+    
+    background-color: transparent;
+}
+
+window {
+    width:            850px; /* Rộng hơn để chứa đường dẫn dài */
+    background-color: @bg-window;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    12px;
+    padding:          25px;
+}
+
+inputbar {
+    background-color: @bg-card;
+    border-radius:    8px;
+    padding:          12px;
+    margin:           0 0 20px 0;
+    children:         [ prompt, entry ];
+    border:           0 0 2px 0;
+    border-color:     @accent;
+}
+
+prompt {
+    text-color: @accent;
+    /* Dùng ký tự để làm icon giả cho chuyên nghiệp */
+    content: "󰈞 "; 
+}
+
+entry {
+    text-color: @fg-main;
+}
+
+listview {
+    lines:      10;
+    spacing:    12px; /* Khoảng cách rộng cho thoáng */
+}
+
+element {
+    padding:          12px 18px;
+    background-color: @bg-card; /* Tạo khối cho từng dòng file */
+    border:           1px;
+    border-color:     #2d334a;
+    border-radius:    10px;
+    text-color:       @fg-main;
+}
+
+element selected {
+    background-color: @accent;
+    text-color:       @bg-window;
+    border-color:     @accent;
+}
+
+element-text {
+    /* Font Mono giúp đường dẫn file nhìn ngay ngắn */
+    font:           "JetBrains Mono Nerd Font 10"; 
+    vertical-align: 0.5;
+    text-color:     inherit;
+}

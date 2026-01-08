@@ -1,0 +1,58 @@
+/*******************************************************************************
+ * CYBER_APP.RASI - App Launcher phong cách Neon
+ *******************************************************************************/
+
+* {
+  	bg: #050505; /* Nền tối đậm có độ trong suốt */
+    fg: #cbe3f0;   /* Màu xanh Cyan đặc trưng Cyberpunk */
+    accent: #ff0055; /* Màu hồng Neon làm điểm nhấn */
+    cyan: #00ffff;
+    background-color: transparent;
+    text-color:       @fg;
+    font: "Inter 12"; 
+}
+
+window {
+    width:            500px; 
+    background-color: @bg;
+    border:           2px; 
+    border-color:     @accent;
+    border-radius:    0px; 
+    padding:          40px;
+}
+
+inputbar {
+    children: [ prompt, entry ]; 
+    margin: 0 0 20px 0;
+}
+
+entry {
+    placeholder: "Execute command..."; 
+    placeholder-color: #333333;
+    text-color: @accent;
+}
+
+listview {
+    lines: 8;
+    spacing: 15px; 
+}
+
+element {
+    padding: 8px;
+}
+
+element selected {
+    background-color: #0d1e3d;
+    text-color: @cyan;
+    border: 0 0 0 4px; 
+    border-color: @accent;
+}
+
+element-icon {
+    size: 24px; 
+    margin: 0 15px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}

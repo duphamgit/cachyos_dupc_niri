@@ -1,0 +1,77 @@
+/*******************************************************************************
+ * NEW_THEME.RASI - APP LAUNCHER MODE
+ *******************************************************************************/
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    display-drun:                "";
+    drun-display-format:         "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+}
+
+* {
+    bg-window:      #111216;
+    bg-item:        #1a1b26;
+    accent:         #00d2ff;
+    fg-main:        #ffffff;
+    fg-dim:         #a9b1d6;
+    
+    background-color: transparent;
+}
+
+window {
+    width:            650px;
+    background-color: @bg-window;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    12px;
+    padding:          20px;
+}
+
+inputbar {
+    background-color: @bg-item;
+    border-radius:    8px;
+    padding:          12px;
+    margin:           0 0 15px 0;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    text-color: @fg-main;
+}
+
+listview {
+    lines:      8;
+    columns:    1;
+    spacing:    5px;
+}
+
+element {
+    padding:       10px;
+    border-radius: 8px;
+    text-color:    @fg-main;
+}
+
+element selected {
+    background-color: @accent;
+    text-color:       @bg-window; /* Chữ tối trên nền sáng */
+}
+
+/* Fix lỗi đồng bộ màu chữ khi chọn */
+element selected element-text {
+    text-color:       @bg-window;
+}
+
+element-icon {
+    size:   24px;
+    margin: 0 15px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}

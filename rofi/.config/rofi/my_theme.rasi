@@ -1,0 +1,87 @@
+/*******************************************************************************
+ * ROFI HIGH-CONTRAST MODERN THEME
+ * Tông màu: Neon Blue & Deep Navy (Sáng rõ, không bị tối)
+ *******************************************************************************/
+
+* {
+    /* Nâng độ sáng của màu nền lên một chút */
+    bg-window:   #161925; 
+    bg-search:   #1f2335;
+    
+    /* Màu chữ phải thật sáng để nổi bật trên nền tối */
+    fg-main:     #ffffff; /* Trắng tinh cho tên app */
+    fg-sub:      #94a3b8; /* Xám xanh sáng cho mô tả */
+    
+    /* Màu xanh Neon làm điểm nhấn (Glow effect) */
+    accent:      #00d2ff;
+    selected-bg: #2d334a;
+
+    font: "Inter Bold 11"; /* Dùng font đậm để chữ rõ ràng hơn */
+}
+
+window {
+    width:            35%;
+    background-color: @bg-window;
+    border:           2px;
+    border-color:     @accent; /* Viền neon giúp cửa sổ rực rỡ hơn */
+    border-radius:    16px;
+    padding:          20px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg-search;
+    border:           1px;
+    border-color:     #334155;
+    border-radius:    12px;
+    padding:          12px 16px;
+    margin:           0 0 20px 0;
+    children:         [ entry ];
+}
+
+entry {
+    placeholder:       "Search applications...";
+    placeholder-color: @fg-sub;
+    text-color:        @fg-main;
+}
+
+listview {
+    fixed-height: false;
+    dynamic:      true;
+    scrollbar:    false;
+    spacing:      8px;
+}
+
+element {
+    padding:       12px;
+    border-radius: 10px;
+    background-color: transparent;
+    text-color:    @fg-main;
+}
+
+/* Khi chọn: Làm bừng sáng cả dòng */
+element selected {
+    background-color: @selected-bg;
+    text-color:       @accent;
+    border:           0 0 0 4px;
+    border-color:     @accent;
+}
+
+element-icon {
+    size:   28px;
+    margin: 0 15px 0 0;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+/* Tách biệt màu cho phần mô tả (nếu có) */
+element-text secondary {
+    text-color: @fg-sub;
+}

@@ -7,7 +7,7 @@ echo "🚀 Đang bắt đầu thiết lập Dotfiles & LED cho CachyOS..."
 
 # 1. Cài đặt các gói cần thiết (Thêm OpenRGB và Qt plugins)
 echo "📦 Đang cài đặt các thành phần hệ thống..."
-sudo pacman -S --needed stow openrgb qt5-wayland qt6-wayland -y
+sudo pacman -S --needed stow openrgb qt5-wayland qt6-wayland waypaper -y
 
 # 2. Thiết lập OpenRGB (Driver & Udev)
 echo "🛠️ Đang cấu hình driver cho LED..."

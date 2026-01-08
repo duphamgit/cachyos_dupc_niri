@@ -1,0 +1,58 @@
+/*******************************************************************************
+ * MINIMAL_APP.RASI - Phong cách tối giản hiện đại
+ *******************************************************************************/
+
+* {
+    bg: #111111ee;
+    fg: #eeeeee;
+    accent: #ffffff; /* Trắng tinh khôi làm điểm nhấn */
+    
+    background-color: transparent;
+    text-color:       @fg;
+    font: "Inter 12";
+}
+
+window {
+    width:            500px;
+    background-color: @bg;
+    border:           1px;
+    border-color:     #333333;
+    border-radius:    0px; /* Góc vuông cực kỳ minimalist */
+    padding:          40px;
+}
+
+inputbar {
+    children: [ entry ];
+    margin: 0 0 30px 0;
+}
+
+entry {
+    placeholder: "Type to search...";
+    placeholder-color: #555555;
+    text-color: @accent;
+}
+
+listview {
+    lines: 6;
+    spacing: 15px;
+}
+
+element {
+    padding: 8px;
+}
+
+element selected {
+    /* Không dùng màu nền, chỉ dùng gạch chân hoặc đổi màu chữ */
+    text-color: @accent;
+    border: 0 0 1px 0;
+    border-color: @accent;
+}
+
+element-icon {
+    size: 20px;
+    margin: 0 15px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
