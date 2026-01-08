@@ -5,25 +5,35 @@ DOTFILES_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 echo "🚀 Đang bắt đầu thiết lập Dotfiles & LED cho CachyOS..."
 
-# 1. Cài đặt các gói cần thiết (Thêm OpenRGB và Qt plugins)
+# 1. Cài đặt các gói cần thiết
+# Thêm i2c-tools để hỗ trợ quét phần cứng và rofi-wayland để chạy mượt trên Niri
 echo "📦 Đang cài đặt các thành phần hệ thống..."
-sudo pacman -S --needed stow openrgb qt5-wayland qt6-wayland waypaper rofi -y
+sudo pacman -S --needed stow openrgb i2c-tools qt5-wayland qt6-wayland waypaper rofi-wayland -y
 
 # 2. Thiết lập OpenRGB (Driver & Udev)
 echo "🛠️ Đang cấu hình driver cho LED..."
 
-# Tự động nạp module i2c-dev khi khởi động
+# Tự động nạp các module cần thiết cho Intel SMBus (Mainboard B760M) và I2C
+# i2c-i801 là driver quan trọng nhất cho dòng mainboard của bạn
 if [ ! -f /etc/modules-load.d/openrgb.conf ]; then
-    echo "i2c-dev" | sudo tee /etc/modules-load.d/openrgb.conf
+    echo -e "i2c-dev\ni2c-i801" | sudo tee /etc/modules-load.d/openrgb.conf
+    # Nạp ngay lập tức để không cần khởi động lại
+    sudo modprobe i2c-dev i2c-i801
 fi
 
-# Tải udev rules nếu chưa có để nhận diện mainboard
-if [ ! -f /etc/udev/rules.d/60-openrgb.rules ]; then
-    sudo curl -L https://gitlab.com/CalcProgrammer1/OpenRGB/-/raw/master/60-openrgb.rules -o /etc/udev/rules.d/60-openrgb.rules
-    sudo udevadm control --reload-rules && sudo udevadm trigger
+# Dọn dẹp udev rules cũ để tránh lỗi "Multiple udev rules installed"
+if [ -f /etc/udev/rules.d/60-openrgb.rules ]; then
+    sudo rm /etc/udev/rules.d/60-openrgb.rules
 fi
 
-# 3. Danh sách các gói cấu hình (Thêm OpenRGB vào danh sách Stow)
+# Cài đặt udev rules chính thức từ package (ổn định hơn tải từ git)
+# Thông thường package openrgb trên Arch đã có sẵn, ta chỉ cần kích hoạt
+sudo udevadm control --reload-rules && sudo udevadm trigger
+
+# Cấp quyền cho user hiện tại truy cập I2C mà không cần sudo
+sudo usermod -aG i2c $USER
+
+# 3. Danh sách các gói cấu hình
 PACKAGES=("niri" "waybar" "fuzzel" "openrgb" "rofi")
 
 # 4. Dọn dẹp và liên kết (Stow)
@@ -35,8 +45,11 @@ for pkg in "${PACKAGES[@]}"; do
     if [ -d "$pkg" ]; then
         echo "🔹 Đang xử lý: $pkg"
 
-        # Xóa thư mục/file cũ để tránh xung đột
-        rm -rf "$HOME/.config/$pkg"
+        # Chỉ xóa nếu nó là thư mục thật hoặc file thật, tránh xóa nhầm symlink
+        if [ -e "$HOME/.config/$pkg" ]; then
+            rm -rf "$HOME/.config/$pkg"
+        fi
+
         mkdir -p "$HOME/.config"
 
         # Chạy lệnh Stow
@@ -46,5 +59,8 @@ for pkg in "${PACKAGES[@]}"; do
     fi
 done
 
+echo "------------------------------------------------------------"
 echo "🎉 Chúc mừng! Mọi thứ đã được đồng bộ."
-echo "Hãy nhấn Mod+Shift+R để reload Niri."
+echo "👉 Lưu ý: Bạn cần LOGOUT hoặc KHỞI ĐỘNG LẠI để quyền I2C có hiệu lực."
+echo "👉 Sau đó, mở OpenRGB và nhấn 'Rescan Devices' để nhận Mainboard."
+echo "👉 Nhấn Mod+Space để mở App Launcher (Rofi)."

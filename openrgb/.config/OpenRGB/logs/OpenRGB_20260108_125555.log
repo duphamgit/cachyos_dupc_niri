@@ -1,0 +1,57 @@
+    OpenRGB v0.9+ (1.0rc2)
+    Commit:  from 
+    Launched: 20260108_125555
+====================================================================================================
+
+0     |Info:    [ProfileManager] Found file: Amber.orp attempting to validate header
+0     |Info:    [ProfileManager] Valid v5 profile found for Amber
+53    |Info:    [ResourceManager] Initializing HID interfaces: Success
+53    |Info:    ------------------------------------------------------
+53    |Info:    |               Start device detection               |
+53    |Info:    ------------------------------------------------------
+58    |Info:    ------------------------------------------------------
+58    |Info:    |             Detecting I2C interfaces               |
+58    |Info:    ------------------------------------------------------
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-3 Device 0000:0000 Subsystem: 0000:0000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-10 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-1 Device 0000:0000 Subsystem: 0000:0000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-8 Device 8086:4680 Subsystem: 1458:D000
+59    |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-15 Device 0000:0000 Subsystem: 0000:0000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-6 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-13 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-4 Device 0000:0000 Subsystem: 0000:0000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-11 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-2 Device 0000:0000 Subsystem: 0000:0000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-9 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-16 Device 8086:7A23 Subsystem: 1458:5001
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-7 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-14 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-5 Device 0000:0000 Subsystem: 0000:0000
+59    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-12 Device 8086:4680 Subsystem: 1458:D000
+59    |Info:    ------------------------------------------------------
+59    |Info:    |               Detecting I2C devices                |
+59    |Info:    ------------------------------------------------------
+360   |Info:    ------------------------------------------------------
+360   |Info:    |            Detecting I2C DIMM modules              |
+360   |Info:    ------------------------------------------------------
+365   |Info:    [ResourceManager] Detected occupied slot 2, bus 12, type óúAW¹ic
+366   |Info:    [ResourceManager] Detected occupied slot 4, bus 12, type óúAW¹ic
+366   |Info:    ------------------------------------------------------
+366   |Info:    |               Detecting I2C PCI devices            |
+366   |Info:    ------------------------------------------------------
+370   |Info:    ------------------------------------------------------
+370   |Info:    |               Detecting HID devices                |
+370   |Info:    ------------------------------------------------------
+370   |Info:    ------------------------------------------------------
+370   |Info:    |            Detecting libusb HID devices            |
+370   |Info:    ------------------------------------------------------
+376   |Info:    ------------------------------------------------------
+376   |Info:    |              Detecting other devices               |
+376   |Info:    ------------------------------------------------------
+383   |Info:    [ResourceManager] Calling Post-detection callbacks
+383   |Info:    ------------------------------------------------------
+383   |Info:    |                Detection completed                 |
+383   |Info:    ------------------------------------------------------
+383   |Dialog:  <h2>WARNING:</h2><p>Multiple OpenRGB udev rules are installed.</p><p>The udev rules file 60-openrgb.rules is installed in both /etc/udev/rules.d and /usr/lib/udev/rules.d.</p><p>Multiple udev rules files can conflict, it is recommended to remove one of them.</p>
