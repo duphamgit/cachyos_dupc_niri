@@ -7,7 +7,7 @@ echo "🚀 Đang bắt đầu thiết lập Dotfiles & LED cho CachyOS..."
 
 # 1. Cài đặt các gói cần thiết (Thêm OpenRGB và Qt plugins)
 echo "📦 Đang cài đặt các thành phần hệ thống..."
-sudo pacman -S --needed stow openrgb qt5-wayland qt6-wayland waypaper -y
+sudo pacman -S --needed stow openrgb qt5-wayland qt6-wayland waypaper rofi -y
 
 # 2. Thiết lập OpenRGB (Driver & Udev)
 echo "🛠️ Đang cấu hình driver cho LED..."
@@ -24,7 +24,7 @@ if [ ! -f /etc/udev/rules.d/60-openrgb.rules ]; then
 fi
 
 # 3. Danh sách các gói cấu hình (Thêm OpenRGB vào danh sách Stow)
-PACKAGES=("niri" "waybar" "fuzzel" "openrgb")
+PACKAGES=("niri" "waybar" "fuzzel" "openrgb" "rofi")
 
 # 4. Dọn dẹp và liên kết (Stow)
 echo "🔗 Đang tiến hành tạo liên kết (Symlinks)..."
