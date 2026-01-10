@@ -3,7 +3,7 @@
 # Lấy đường dẫn tuyệt đối của thư mục chứa script
 DOTFILES_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
-echo "🚀 Đang bắt đầu thiết lập Dotfiles & LED cho CachyOS..."
+echo "🚀 Đang bắt đầu thiết lập Dotfiles & LED cho CachyOS... Niri version"
 
 # 1. Cài đặt các gói cần thiết
 # Thêm i2c-tools để hỗ trợ quét phần cứng và rofi-wayland để chạy mượt trên Niri
