@@ -1,90 +1,100 @@
-/* CYBERPUNK V2 - FINAL FIX */
-
+/* CYBERPUNK NIRI - CLEAN 35PX LOCK */
 * {
-    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: "JetBrainsMono Nerd Font", Roboto, sans-serif;
+    font-size: 12px;
     border: none;
-    border-radius: 0;
+    border-radius: 1px;
 }
 
 window#waybar {
-    background-color: rgba(10, 12, 18, 0.85); 
+    background-color: rgba(10, 12, 18, 0.85);
     border-bottom: 2px solid #ff007c;
-    color: #ffffff;
-    transition: all 0.5s;
 }
 
-#window {
-    background: linear-gradient(45deg, #ff007c, #00d2ff);
-    color: #000000; 
-    border-radius: 4px;
-    padding: 2px 15px;
-    margin: 5px 10px;
-    font-weight: 800;
-}
-
+/* WORKSPACE: SINGLE LED RED */
 #workspaces button {
-    padding: 0 10px;
-    color: #565f89;
+    min-width: 10px;
+    min-height: 10px;
     background: transparent;
 }
 
-#workspaces button.active {
-    color: #00d2ff;
-    background-color: rgba(0, 210, 255, 0.1);
-    border-bottom: 2px solid #00d2ff;
+#workspaces button.focused {
+    background-color: #ff0000;
+    min-width: 1px;
+    min-height: 1px;
+    margin: 1px 1px;
+    animation: led-blink 4s ease-in-out infinite;
 }
 
-#clock, #battery, #cpu, #memory, #disk, #temperature, #network, #pulseaudio, #tray {
+@keyframes led-blink {
+    0% {
+        background-color: #ff0000;
+        box-shadow: 0 0 1px #ff0000;
+    }
+    50% {
+        background-color: #ff4d4d;
+        box-shadow: 0 0 1px #ff0000;
+    }
+    100% {
+        background-color: #ff0000;
+        box-shadow: 0 0 1px #ff0000;
+    }
+}
+
+/* MODULES PHẢI: GIẢM PADDING/MARGIN ĐỂ KHÔNG PHÌNH BAR */
+#clock,
+#cpu,
+#memory,
+#disk,
+#network,
+#pulseaudio {
     background: rgba(255, 255, 255, 0.05);
     color: #f8f8f2;
-    padding: 0 12px;
-    margin: 4px 3px;
+    padding: 0 8px;
+    margin: 2px 3px;
     border: 1px solid rgba(0, 210, 255, 0.2);
 }
+
 #clock {
-    font-weight: bold;
     color: #ff007c;
     border: 1px solid #ff007c;
-    
-    /* Thay vì text-align, ta dùng padding đều hai bên */
-    /* Bạn có thể tăng/giảm số 15px để đồng hồ rộng ra hoặc hẹp lại */
-    padding-left: 15px;
-    padding-right: 15px;
+    font-weight: bold;
 }
-/* --- PHẦN FIX LỖI (Dòng 65-75) --- */
-/* Lưu ý: Đảm bảo có dấu phẩy sau mỗi mã màu và không thừa khoảng trắng lạ */
-
-#cpu.green, #memory.green, #disk.green {
-    background: linear-gradient(to top, #2ecc71 0%, #2ecc71 30%, rgba(255, 255, 255, 0.1) 30.1%);
+#network {
+    color: #7dcfff;
 }
-
-#cpu.yellow, #memory.yellow, #disk.yellow {
-    background: linear-gradient(to top, #f1c40f 0%, #f1c40f 60%, rgba(255, 255, 255, 0.1) 60.1%);
-}
-
-#cpu.orange, #memory.orange, #disk.orange {
-    background: linear-gradient(to top, #e67e22 0%, #e67e22 90%, rgba(255, 255, 255, 0.1) 90.1%);
-}
-
-#cpu.red, #memory.red, #disk.red {
-    background: linear-gradient(to top, #e74c3c 0%, #e74c3c 100%, rgba(255, 255, 255, 0.1) 100%);
-}
-
-/* ------------------------------- */
-
-#battery {
-    color: #9ece6a;
-}
-
 #pulseaudio {
     color: #00ff9f;
 }
 
-#network {
-    color: #7dcfff;
+/* GRADIENTS MÀU SẮC GỐC */
+#cpu.green,
+#memory.green,
+#disk.green {
+    background: linear-gradient(
+        to top,
+        #2ecc71 0%,
+        #2ecc71 30%,
+        rgba(255, 255, 255, 0.1) 30.1%
+    );
 }
-
-#tray {
-    margin-right: 10px;
+#cpu.yellow,
+#memory.yellow,
+#disk.yellow {
+    background: linear-gradient(
+        to top,
+        #f1c40f 0%,
+        #f1c40f 60%,
+        rgba(255, 255, 255, 0.1) 60.1%
+    );
+}
+#cpu.red,
+#memory.red,
+#disk.red {
+    background: linear-gradient(
+        to top,
+        #e74c3c 0%,
+        #e74c3c 100%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
 }

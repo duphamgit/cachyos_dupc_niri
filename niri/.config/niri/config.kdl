@@ -161,6 +161,8 @@ binds {
     CTRL+SHIFT+3                        { screenshot-window; }
  	// Chụp vùng và lưu thẳng vào clipboard
  	Mod+P 						{ spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
+    // Open Gemini Applications
+    Mod+G                       { spawn "chromium" "--app=https://gemini.google.com"; }
     // ─── Emergency Escape Key ───
     // Use this when a fullscreen app blocks your keybinds.
     // It disables any active keyboard shortcut inhibitor, restoring control.
