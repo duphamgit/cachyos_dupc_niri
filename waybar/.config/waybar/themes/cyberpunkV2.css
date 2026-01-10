@@ -13,13 +13,13 @@ window#waybar {
 
 /* WORKSPACE: SINGLE LED RED */
 #workspaces button {
-    min-width: 10px;
-    min-height: 10px;
+    min-width: 1px;
+    min-height: 1px;
     background: transparent;
 }
 
 #workspaces button.focused {
-    background-color: #ff0000;
+    background-color: rgba(10, 12, 18, 0.85);
     min-width: 1px;
     min-height: 1px;
     margin: 1px 1px;
@@ -28,16 +28,13 @@ window#waybar {
 
 @keyframes led-blink {
     0% {
-        background-color: #ff0000;
-        box-shadow: 0 0 1px #ff0000;
+        background-color: rgba(10, 12, 18, 0.85);
     }
     50% {
-        background-color: #ff4d4d;
-        box-shadow: 0 0 1px #ff0000;
+        background-color: #ff007c;
     }
     100% {
-        background-color: #ff0000;
-        box-shadow: 0 0 1px #ff0000;
+        background-color: rgba(10, 12, 18, 0.85);
     }
 }
 
