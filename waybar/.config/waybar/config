@@ -17,9 +17,9 @@
         "interval": "once"
     },
     "clock": { "format": "{:%H:%M}" },
-    "cpu": { "format": "{usage}% CPU", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
-    "memory": { "format": "{percentage}% RAM", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
-    "disk": { "format": "{percentage_used}% HDD", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
+    "cpu": {"interval":1, "format": "{usage}% CPU", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
+    "memory": {"interval":1, "format": "{percentage}% RAM", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
+    "disk": {"interval":1, "format": "{percentage_used}% HDD", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
     "network": { "format-wifi": "{essid} " },
     "pulseaudio": { "format": "{volume}% {icon}", "format-icons": { "default": ["", "", ""] } }
 }

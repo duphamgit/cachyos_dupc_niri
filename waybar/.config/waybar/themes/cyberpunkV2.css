@@ -99,11 +99,23 @@ window#waybar {
 #disk.yellow {
     background: linear-gradient(
         to top,
-        rgba(241, 196, 15, 0.3) 0%,
-        rgba(241, 196, 15, 0.3) 60%,
+        rgba(255, 255, 0, 0.5) 0%,
+        rgba(255, 255, 0, 0.5) 100%,
+        transparent 45%
+    );
+    border-bottom: 2px solid #ffcc00;
+}
+
+#cpu.orange,
+#memory.orange,
+#disk.orange {
+    background: linear-gradient(
+        to top,
+        rgba(230, 126, 34, 0.3) 0%,
+        rgba(230, 126, 34, 0.3) 100%,
         transparent 60%
     );
-    border-bottom: 2px solid #f1c40f;
+    border-bottom: 2px solid #e67e22;
 }
 
 #cpu.red,
@@ -111,8 +123,8 @@ window#waybar {
 #disk.red {
     background: linear-gradient(
         to top,
-        rgba(231, 76, 60, 0.3) 0%,
-        rgba(231, 76, 60, 0.3) 100%,
+        rgba(255, 0, 0, 0.3) 0%,
+        rgba(255, 0, 0, 0.3) 100%,
         transparent 100%
     );
     border-bottom: 2px solid #e74c3c;
