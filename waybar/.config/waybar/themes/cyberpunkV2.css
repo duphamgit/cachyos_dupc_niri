@@ -76,9 +76,12 @@ window#waybar {
 
 #network {
     color: #7dcfff;
+    border-bottom: 2px solid #7dcfff;
 }
+
 #pulseaudio {
     color: #00ff9f;
+    border-bottom: 2px solid #00ff9f;
 }
 
 /* --- DYNAMIC GRADIENTS --- */
