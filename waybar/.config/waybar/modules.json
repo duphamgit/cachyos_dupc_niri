@@ -1,10 +1,7 @@
 {
-  // Workspaces
   "niri/workspaces": {
     "on-click": "activate"
   },
-
-  // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 18,
@@ -20,8 +17,6 @@
       "Foot Server": "Terminal"
     }
   },
-
-  // niri Window
   "niri/window": {
     "format": "{}",
     "rewrite": {
@@ -33,52 +28,38 @@
     },
     "separate-outputs": true
   },
-
-  // Empty
   "custom/empty": {
     "format": ""
   },
-
-    // Tools
   "custom/tools": {
     "format": "",
     "tooltip-format": "Tools"
   },
-
-  // Updates Count
   "custom/updates": {
-      "format": "{} {icon}",
-      "return-type": "json",
-      "format-icons": {
-          "has-updates": "󱍷",
-          "updated": "󰂪"
-      },
-      "exec-if": "which waybar-module-pacman-updates",
-      "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
+    "format": "{} {icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": "󱍷",
+      "updated": "󰂪"
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
   },
-
-  // wofi Application Launcher
   "custom/appmenu": {
     "format": "   ",
     "on-click": "sleep 0.2;wofi -show drun -replace",
     "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
   },
-
-  // wofi Application Launcher
   "custom/appmenuicon": {
     "format": "",
     "on-click": "sleep 0.2;wofi -show drun -replace",
     "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
   },
-
-  // Power Menu
   "custom/exit": {
     "format": " 󰐥 ",
     "on-click": "~/.config/waybar/scripts/power-menu.sh",
     "tooltip-format": "Power Menu"
   },
-
-  // Keyboard State
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
@@ -88,28 +69,20 @@
       "unlocked": ""
     }
   },
-
-  // System tray
   "tray": {
     "icon-size": 21,
     "spacing": 10
   },
-
-  // Clock
   "clock": {
     "format": "{:%H:%M %a}",
     "on-click": "ags -t calendar",
     "tooltip": false
   },
-
   "niri/language": {
     "format": "/ K {short}"
   },
-
-  // Battery
   "battery": {
     "states": {
-      // "good": 95,
       "warning": 30,
       "critical": 15
     },
@@ -117,26 +90,18 @@
     "format-charging": "  {capacity}%",
     "format-plugged": "  {capacity}%",
     "format-alt": "{icon}  {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
     "format-icons": [" ", " ", " ", " ", " "]
   },
-
-  // Pulseaudio
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
     "format": "{icon}  {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
-    "format-icons": {
-    },
+    "format-icons": {},
     "on-click": "pavucontrol"
   },
-
-  // Bluetooth
   "bluetooth": {
     "format": " {status}",
     "format-disabled": "",
@@ -145,15 +110,11 @@
     "on-click": "blueman-manager",
     "format-no-controller": ""
   },
-
-  // Other
   "user": {
     "format": "{user}",
     "interval": 60,
     "icon": false
   },
-
-  // backlight:
   "backlight": {
     "format": "{icon} {percent}%",
     "format-icons": [

@@ -20,6 +20,13 @@
     "cpu": {"interval":1, "format": "{usage}% CPU", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
     "memory": {"interval":1, "format": "{percentage}% RAM", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
     "disk": {"interval":1, "format": "{percentage_used}% HDD", "states": { "green": 0, "yellow": 31, "orange": 61, "red": 91 } },
-    "network": { "format-wifi": "{essid} " },
+    "network": {
+    "interval": 1,
+    "format-wifi": "{essid} ",
+    "format-ethernet": "{ifname} 󰈀",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "󰇚 {bandwidthDownBits}  󰕒 {bandwidthUpBits}",
+    "tooltip-format": "{ifname} via {gwaddr}"
+    },
     "pulseaudio": { "format": "{volume}% {icon}", "format-icons": { "default": ["", "", ""] } }
 }
