@@ -1,43 +1,59 @@
 /* CYBERPUNK NIRI - CLEAN 35PX LOCK */
+
 * {
     font-family: "JetBrainsMono Nerd Font", Roboto;
     font-size: 12px;
-    border: 1px;
+    border: none;
     border-radius: 1px;
 }
 
 window#waybar {
     background-color: rgba(10, 12, 18, 0.85);
-    border-bottom: 0px solid #ff007c;
 }
 
-/* WORKSPACE: SINGLE LED RED */
+/* --- WORKSPACE: SINGLE LED --- */
 #workspaces button {
-    min-width: 1px;
-    min-height: 1px;
+    padding: 0 5px;
+    margin: 4px 2px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.2);
 }
 
 #workspaces button.focused {
-    background-color: rgba(10, 12, 18, 0.85);
-    min-width: 1px;
-    min-height: 1px;
-    margin: 1px 1px;
-    animation: led-blink 3s ease-in-out infinite;
+    color: transparent;
+    animation-name: led-blink;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
+/* Sửa lỗi GTK bằng cách tách biệt các mốc phần trăm rõ ràng */
 @keyframes led-blink {
-    0% {
-        background-color: rgba(10, 12, 18, 0.85);
+    from {
+        background: radial-gradient(
+            circle,
+            rgba(255, 0, 124, 0.3) 0%,
+            transparent 25%
+        );
     }
     50% {
-        background-color: #ff007c;
+        background: radial-gradient(
+            circle,
+            #ff007c 20%,
+            rgba(255, 0, 124, 0.4) 40%,
+            transparent 50%
+        );
     }
-    100% {
-        background-color: rgba(10, 12, 18, 0.85);
+    to {
+        background: radial-gradient(
+            circle,
+            rgba(255, 0, 124, 0.3) 0%,
+            transparent 30%
+        );
     }
 }
 
-/* MODULES PHẢI: GIẢM PADDING/MARGIN ĐỂ KHÔNG PHÌNH BAR */
+/* --- MODULES PHẢI --- */
 #clock,
 #cpu,
 #memory,
@@ -46,9 +62,10 @@ window#waybar {
 #pulseaudio {
     background: rgba(255, 255, 255, 0.05);
     color: #f8f8f2;
-    padding: 0 8px;
-    margin: 2px 3px;
+    padding: 0 10px;
+    margin: 4px 3px;
     border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 4px;
 }
 
 #clock {
@@ -56,6 +73,7 @@ window#waybar {
     border: 1px solid #ff007c;
     font-weight: bold;
 }
+
 #network {
     color: #7dcfff;
 }
@@ -63,34 +81,43 @@ window#waybar {
     color: #00ff9f;
 }
 
-/* GRADIENTS MÀU SẮC GỐC */
+/* --- DYNAMIC GRADIENTS --- */
 #cpu.green,
 #memory.green,
 #disk.green {
     background: linear-gradient(
         to top,
-        #2ecc71 0%,
-        #2ecc71 30%,
-        rgba(255, 255, 255, 0.1) 30.1%
+        rgba(46, 204, 113, 0.3) 0%,
+        rgba(46, 204, 113, 0.3) 30%,
+        transparent 30%
     );
+    border-bottom: 2px solid #2ecc71;
 }
+
 #cpu.yellow,
 #memory.yellow,
 #disk.yellow {
     background: linear-gradient(
         to top,
-        #f1c40f 0%,
-        #f1c40f 60%,
-        rgba(255, 255, 255, 0.1) 60.1%
+        rgba(241, 196, 15, 0.3) 0%,
+        rgba(241, 196, 15, 0.3) 60%,
+        transparent 60%
     );
+    border-bottom: 2px solid #f1c40f;
 }
+
 #cpu.red,
 #memory.red,
 #disk.red {
     background: linear-gradient(
         to top,
-        #e74c3c 0%,
-        #e74c3c 100%,
-        rgba(255, 255, 255, 0.1) 100%
+        rgba(231, 76, 60, 0.3) 0%,
+        rgba(231, 76, 60, 0.3) 100%,
+        transparent 100%
     );
+    border-bottom: 2px solid #e74c3c;
+}
+#custom-hint {
+    color: #ffffff;
+    padding: 0 10px;
 }
