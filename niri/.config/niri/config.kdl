@@ -199,16 +199,16 @@ binds {
             proportion 0.5
             proportion 0.66667
         }
-
         focus-ring {
-            width 3
-            active-color "#00ac89"
+
+            width 2
+            active-color "#ff007c"
             inactive-color "#505050"
         }
 
         shadow {
-            softness 30
-            spread 5
+            softness 0
+            spread 1
             offset x=0 y=5
             color "#0007"
         }
@@ -260,7 +260,8 @@ binds {
     }
 
     window-rule {
-        geometry-corner-radius 20 // Set every window radius to 20
+        //set radius for window border
+        geometry-corner-radius 8 // Set every window radius to 6
         clip-to-geometry true
     }
 
