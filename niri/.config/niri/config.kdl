@@ -187,6 +187,7 @@ binds {
     spawn-sh-at-startup "env QT_QPA_PLATFORM=xcb openrgb --profile Amber"
     // zlaunch
     spawn-at-startup "zlaunch"
+    spawn-at-startup "sh" "-c" "GEMINI_API_KEY='AIzaSyD8eAAEETIYgYWStSj46qukggadkT06ay8' zlaunch"
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
 
