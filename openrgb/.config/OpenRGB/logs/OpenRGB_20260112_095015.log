@@ -1,0 +1,38 @@
+    OpenRGB v0.9+ (1.0rc2)
+    Commit:  from 
+    Launched: 20260112_095015
+====================================================================================================
+
+0     |Info:    [ProfileManager] Found file: Amber.orp attempting to validate header
+0     |Info:    [ProfileManager] Valid v5 profile found for Amber
+54    |Info:    [ResourceManager] Initializing HID interfaces: Success
+54    |Info:    ------------------------------------------------------
+54    |Info:    |               Start device detection               |
+54    |Info:    ------------------------------------------------------
+64    |Info:    ------------------------------------------------------
+64    |Info:    |             Detecting I2C interfaces               |
+64    |Info:    ------------------------------------------------------
+64    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-3 Device 0000:0000 Subsystem: 0000:0000
+64    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-10 Device 8086:4680 Subsystem: 1458:D000
+64    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-1 Device 0000:0000 Subsystem: 0000:0000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-8 Device 8086:4680 Subsystem: 1458:D000
+65    |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-15 Device 0000:0000 Subsystem: 0000:0000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-6 Device 8086:4680 Subsystem: 1458:D000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-13 Device 8086:4680 Subsystem: 1458:D000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-4 Device 0000:0000 Subsystem: 0000:0000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-11 Device 8086:4680 Subsystem: 1458:D000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-2 Device 0000:0000 Subsystem: 0000:0000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-9 Device 8086:4680 Subsystem: 1458:D000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-16 Device 8086:7A23 Subsystem: 1458:5001
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-7 Device 8086:4680 Subsystem: 1458:D000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-14 Device 8086:4680 Subsystem: 1458:D000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-5 Device 0000:0000 Subsystem: 0000:0000
+65    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-12 Device 8086:4680 Subsystem: 1458:D000
+65    |Info:    ------------------------------------------------------
+65    |Info:    |               Detecting I2C devices                |
+65    |Info:    ------------------------------------------------------
+458   |Info:    ------------------------------------------------------
+458   |Info:    |            Detecting I2C DIMM modules              |
+458   |Info:    ------------------------------------------------------

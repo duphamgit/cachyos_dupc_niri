@@ -1,10 +1,10 @@
 # Ayu Dark theme for zlaunch
 # Based on https://github.com/ayu-theme/ayu-colors
-name = "ayu-dark"
+name = "my-theme"
 
 # Window settings
 window_background = "#0a0e14"      # Background with transparency
-window_border = "#39bae626"          # Blue with low opacity
+window_border = "#ff007c"          # Blue with low opacity
 window_border_radius = 12.0
 
 # List items
