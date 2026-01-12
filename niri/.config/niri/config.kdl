@@ -56,7 +56,8 @@ binds {
     Mod+SPACE                           hotkey-overlay-title="Open App Launcher" { spawn "zlaunch" "show"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
-
+    //open Zalo for chatting
+    MOD+Z                               { spawn "chromium" "--app=https://chat.zalo.me"; }
     // Please choose your own file manager
     MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
 

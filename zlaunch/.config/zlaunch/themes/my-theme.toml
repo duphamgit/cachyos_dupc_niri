@@ -1,7 +1,11 @@
 # Ayu Dark theme for zlaunch
 # Based on https://github.com/ayu-theme/ayu-colors
 name = "my-theme"
-
+# --- [NEW] FONT SETTINGS ---
+# Lưu ý: Bạn cần thay tên Font bằng font bạn đã cài trên máy (vd: "JetBrains Mono", "Inter", "Fira Code")
+font_family = "JetBrains Mono"           # Font chính cho toàn bộ giao diện
+font_weight = "Medium"          # Độ dày (Regular, Medium, Bold)
+font_size = 14.0                # Kích thước chữ chung cho tiêu đề
 # Window settings
 window_background = "#0a0e14"      # Background with transparency
 window_border = "#ff007c"          # Blue with low opacity
