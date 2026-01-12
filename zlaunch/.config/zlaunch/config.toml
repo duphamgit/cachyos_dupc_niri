@@ -1,0 +1,5 @@
+theme = "my-theme"
+window_width = 600.0
+window_height = 400.0
+hyprland_auto_blur = true
+enable_transparency = true

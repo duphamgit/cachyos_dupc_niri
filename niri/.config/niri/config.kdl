@@ -52,7 +52,8 @@ binds {
 
     // ─── Applications ───
     MOD+T                     			hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
-    Mod+SPACE                           hotkey-overlay-title="Open App Launcher: rofi" { spawn "rofi" "-show" "drun" "-show-icons"; }
+    Mod+SHIFT+SPACE                     hotkey-overlay-title="Open App Launcher: rofi" { spawn "rofi" "-show" "drun" "-show-icons"; }
+    Mod+SPACE                           hotkey-overlay-title="Open App Launcher" { spawn "zlaunch" "show"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
 
@@ -184,6 +185,8 @@ binds {
     spawn-sh-at-startup "waybar" // Launch waybar
     // Sửa dòng này: Thêm env để tránh lỗi Wayland và gom lệnh vào một chuỗi
     spawn-sh-at-startup "env QT_QPA_PLATFORM=xcb openrgb --profile Amber"
+    // zlaunch
+    spawn-at-startup "zlaunch"
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
 
