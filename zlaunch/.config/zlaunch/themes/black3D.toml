@@ -1,0 +1,58 @@
+# Black 3D Professional Theme
+# Sự kết hợp giữa các tông đen sâu và hiệu ứng nổi khối xám bạc
+name = "black3D"
+
+# --- FONT SETTINGS ---
+font_family = "JetBrains Mono"
+font_weight = "Bold"
+font_size = 14.0
+
+# Window settings
+# Nền đen than chì (Charcoal Black) để tạo cảm giác sâu
+window_background = "#1A1A1A"
+# Viền đen nhạt hơn một chút để phân tách cửa sổ với màn hình
+window_border = "#262626"
+window_border_radius = 16.0
+window_border_width = 2.0
+
+# Glow 3D (Hiệu ứng ánh sáng Neon/Shadow ngược)
+# Sử dụng màu trắng mờ để tạo hiệu ứng "viền sáng" giúp khối đen nổi lên
+neon_color = "#FFFFFF15"
+neon_secondary = "#00000050"  # Bóng đổ tối phía dưới
+neon_glow_size = 10.0
+neon_intensity = 0.5
+
+# --- ITEM CONTENT ---
+# Tiêu đề app: Trắng xám nhạt (Platinum) để nổi bật trên nền đen
+item_title_color = "#E0E0E0"
+# Chữ mô tả: Xám trung tính
+item_description_color = "#808080"
+item_title_line_height = 18.0
+item_content_height = 46.0
+
+# Selection state
+# Khi chọn: Dùng màu xám đen đậm hơn hoặc nhạt hơn để tạo cảm giác nhấn nút
+# Ở đây dùng màu xám đậm #2D2D2D để tạo khối lõm
+item_background_selected = "#2D2D2D"
+
+# Icons
+icon_size = 24.0
+icon_placeholder_background = "#333333"
+icon_placeholder_color = "#666666"
+
+[section_header]
+# Tiêu đề nhóm: Xám bạc
+color = "#AAAAAA"
+margin_top = 15.0
+margin_bottom = 8.0
+
+[action_indicator]
+label_color = "#808080"
+key_background = "#262626"
+key_border = "#333333"
+key_color = "#FFFFFF"
+
+[ai]
+# Bong bóng chat AI màu đen sâu, chữ trắng mờ
+user_bubble_background = "#262626"
+user_bubble_text_color = "#DCDCDC"

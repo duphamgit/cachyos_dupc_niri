@@ -1,0 +1,48 @@
+# White 3D Clean Theme - Gray Title Update
+name = "white3D"
+
+# --- FONT SETTINGS ---
+font_family = "JetBrains Mono"
+font_weight = "Bold"
+font_size = 14.0
+
+# Window settings
+window_background = "#DCDCDC" # Màu trắng ngả xám nhẹ bạn đã chọn
+window_border = "#DCDCDC"
+window_border_radius = 16.0
+window_border_width = 2.0
+
+# Glow 3D (Shadow effect)
+neon_color = "#FFFFFF"
+neon_secondary = "#FFFFFF"
+neon_glow_size = 6.0
+neon_intensity = 0.4
+
+# --- ITEM CONTENT (Phần bạn cần) ---
+# Chữ tiêu đề: Xám đen (Charcoal) cực kỳ chuyên nghiệp
+item_title_color = "#333333"
+# Chữ mô tả: Xám nhạt hơn để tạo phân cấp thị giác
+item_description_color = "#757575"
+item_title_line_height = 18.0
+item_content_height = 46.0
+
+# Selection state
+# Khi chọn: Nền xám rất nhạt, chữ vẫn giữ màu xám đen để dễ đọc
+item_background_selected = "#EBEBEB"
+
+# Icons
+icon_size = 24.0
+icon_placeholder_background = "#E0E0E0"
+icon_placeholder_color = "#9E9E9E"
+
+[section_header]
+# Tiêu đề nhóm: Xám đậm để đồng bộ với tiêu đề app
+color = "#424242"
+margin_top = 15.0
+margin_bottom = 8.0
+
+[action_indicator]
+label_color = "#757575"
+key_background = "#FFFFFF"
+key_border = "#DCDCDC"
+key_color = "#333333"
