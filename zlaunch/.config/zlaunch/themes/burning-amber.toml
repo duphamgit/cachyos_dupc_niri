@@ -1,0 +1,70 @@
+# Amber-Orange Warmth Theme for zlaunch (GPUI)
+# Sự kết hợp giữa Cam cháy rực rỡ và Nâu đồng tối
+name = "burning-amber"
+
+# --- FONT SETTINGS ---
+font_family = "JetBrains Mono"
+font_weight = "Bold"
+font_size = 14.0
+
+# Window settings
+# Nền đen nâu trầm (Dark Chocolate) giúp màu cam "phát sáng" tốt hơn
+window_background = "#130f0d"
+# Viền cam đậm đặc trưng
+window_border = "#ff8c00"
+window_border_radius = 12.0
+window_border_width = 3.0
+
+# Glow neon SETTINGS (Hiệu ứng tỏa sáng cam rực)
+# Tăng cường độ Glow để tạo cảm giác 3D nổi bật
+neon_color = "#ff660040"      # Cam rực rỡ (tăng Alpha lên 40)
+neon_secondary = "#e6510033"  # Cam cháy sâu
+neon_glow_size = 10.0         # Tỏa sáng rộng hơn
+neon_border_thickness = 1.2
+neon_frequency = 1.0          # Nhịp đập ổn định
+neon_intensity = 0.8          # Cường độ sáng rõ nét
+
+# List items
+item_margin_x = 8.0
+item_margin_y = 3.0
+item_padding_x = 12.0
+item_padding_y = 10.0
+item_border_radius = 8.0
+item_background = "#00000000"
+# Khi chọn mục: Màu nền cam đồng mờ
+item_background_selected = "#ff8c002b"
+
+# Item content
+# Chữ chính: Vàng cam nhạt (Goldenrod) cực kỳ sắc nét
+item_title_color = "#ffbd66"
+# Chữ phụ: Màu đồng cổ (Muted Bronze) để giữ nét Cyberpunk cổ điển
+item_description_color = "#8c6a56"
+item_title_line_height = 16.0
+item_content_height = 42.0
+
+# Icons
+icon_size = 24.0
+icon_placeholder_background = "#261a12"
+icon_placeholder_color = "#ff8c00"
+
+# Empty state
+empty_state_height = 200.0
+empty_state_color = "#ff4500"
+
+[section_header]
+# Tiêu đề nhóm: Màu cam đỏ (Orange Red) để phân cấp rõ rệt
+color = "#ff4500"
+margin_top = 12.0
+margin_bottom = 6.0
+padding_y = 6.0
+
+[action_indicator]
+label_color = "#ffbd6699"
+key_background = "#ff8c0033"
+key_border = "#ff8c00"
+key_color = "#ffffff"
+
+[ai]
+# Bong bóng chat AI màu cam đồng, chữ trắng kem dễ đọc
+user_bubble_background = "#4d2b1a"
+user_bubble_text_color = "#fff4e6"

@@ -1,0 +1,68 @@
+# Amber Warmth Theme for zlaunch (GPUI)
+# Một sự kết hợp giữa vàng hổ phách ấm áp và nâu đen sang trọng
+name = "amber-warmth"
+
+# --- FONT SETTINGS ---
+font_family = "JetBrains Mono"
+font_weight = "Medium"
+font_size = 14.0
+
+# Window settings
+# Nền nâu đen ấm, tạo cảm giác dễ chịu cho mắt hơn xanh đen
+window_background = "#1a1612"
+# Viền vàng hổ phách đặc trưng, giảm độ chói
+window_border = "#ffb000"
+window_border_radius = 10.0
+window_border_width = 2.0
+
+# Glow neon SETTINGS (Hiệu ứng tỏa sáng ấm)
+neon_color = "#ffb0001a"      # Màu vàng cam nhạt (Alpha thấp để không bị lóa)
+neon_secondary = "#ff80001a"  # Chuyển nhẹ sang cam để tạo hiệu ứng 3D
+neon_glow_size = 10.0
+neon_border_thickness = 1.0
+neon_frequency = 0.8          # Nhịp thở chậm hơn cho cảm giác thư giãn
+neon_intensity = 0.6          # Cường độ vừa phải
+
+# List items
+item_margin_x = 8.0
+item_margin_y = 3.0
+item_padding_x = 12.0
+item_padding_y = 10.0
+item_border_radius = 6.0
+item_background = "#00000000"
+# Khi chọn mục: Nền vàng cam mờ kết hợp viền sáng
+item_background_selected = "#ffb00026"
+
+# Item content
+# Chữ chính: Vàng sáng để cực kỳ dễ đọc
+item_title_color = "#ffcc33"
+# Chữ phụ: Màu cát/kem nhạt để hài hòa với tone ấm
+item_description_color = "#a68d7a"
+item_title_line_height = 16.0
+item_content_height = 40.0
+
+# Icons
+icon_size = 24.0
+icon_placeholder_background = "#2d241e"
+icon_placeholder_color = "#ffb000"
+
+# Empty state
+empty_state_height = 200.0
+empty_state_color = "#ff8000"
+
+[section_header]
+color = "#ff8000"                    # Cam cháy cho các tiêu đề nhóm
+margin_top = 12.0
+margin_bottom = 6.0
+padding_y = 6.0
+
+[action_indicator]
+label_color = "#ffcc3399"
+key_background = "#ffb00033"
+key_border = "#ffb000"
+key_color = "#ffffff"
+
+[ai]
+# Bong bóng chat AI màu nâu đồng ấm áp
+user_bubble_background = "#3d3025"
+user_bubble_text_color = "#f5e6d3"

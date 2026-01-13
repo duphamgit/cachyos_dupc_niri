@@ -16,9 +16,9 @@ window_border_radius = 12.0
 window_border_width = 4.0
 # Glow neon SETTINGS
 # Primary neon color (hex, RGB object, or HSLA object)
-neon_color = "#00f3ff26"
+neon_color = "#414868"
 # Secondary neon color for hue blending
-neon_secondary = "#00f3ff26"
+neon_secondary = "#7aa2f7"
 # Glow size in pixels (outer halo)
 neon_glow_size = 10.0
 # Simulated border thickness for neon (used via padding)
@@ -38,11 +38,11 @@ item_padding_y = 8.0
 item_border_radius = 4.0           # Bo góc ít hơn tạo cảm giác góc cạnh
 item_background = "#00000000"
 # Khi chọn mục, sẽ có nền xanh Cyan mờ
-item_background_selected = "#00f3ff26"
+item_background_selected = "#2f3549"
 
 # Item content
-item_title_color = "#00f3ff"
-item_description_color = "#718093"
+item_title_color = "#00f3ff"         # Tiêu đề xanh Cyan phát sáng
+item_description_color = "#718093"   # Mô tả màu hồng mờ
 item_title_line_height = 16.0
 item_content_height = 36.0
 
