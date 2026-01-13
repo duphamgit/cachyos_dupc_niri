@@ -54,6 +54,7 @@ binds {
     MOD+T                     			hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
     Mod+SHIFT+SPACE                     hotkey-overlay-title="Open App Launcher: rofi" { spawn "rofi" "-show" "drun" "-show-icons"; }
     Mod+SPACE                           hotkey-overlay-title="Open App Launcher" { spawn "zlaunch" "show"; }
+    //Mod+SPACE                           hotkey-overlay-title="Open App Launcher" { spawn "/home/du/Downloads/zlaunch-main/target/release/zlaunch" "show"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     //open Zalo for chatting

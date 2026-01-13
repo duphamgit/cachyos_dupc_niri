@@ -1,0 +1,60 @@
+    OpenRGB v0.9+ (1.0rc2)
+    Commit:  from 
+    Launched: 20260112_190052
+====================================================================================================
+
+0     |Info:    [ProfileManager] Found file: Amber.orp attempting to validate header
+0     |Info:    [ProfileManager] Valid v5 profile found for Amber
+53    |Info:    [ResourceManager] Initializing HID interfaces: Success
+53    |Info:    ------------------------------------------------------
+53    |Info:    |               Start device detection               |
+53    |Info:    ------------------------------------------------------
+61    |Info:    ------------------------------------------------------
+61    |Info:    |             Detecting I2C interfaces               |
+61    |Info:    ------------------------------------------------------
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-3 Device 0000:0000 Subsystem: 0000:0000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-10 Device 8086:4680 Subsystem: 1458:D000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-1 Device 0000:0000 Subsystem: 0000:0000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-8 Device 8086:4680 Subsystem: 1458:D000
+61    |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-15 Device 0000:0000 Subsystem: 0000:0000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-6 Device 8086:4680 Subsystem: 1458:D000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-13 Device 8086:4680 Subsystem: 1458:D000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-4 Device 0000:0000 Subsystem: 0000:0000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-11 Device 8086:4680 Subsystem: 1458:D000
+61    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-2 Device 0000:0000 Subsystem: 0000:0000
+62    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+62    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-9 Device 8086:4680 Subsystem: 1458:D000
+62    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-16 Device 8086:7A23 Subsystem: 1458:5001
+62    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-7 Device 8086:4680 Subsystem: 1458:D000
+62    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-14 Device 8086:4680 Subsystem: 1458:D000
+62    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-5 Device 0000:0000 Subsystem: 0000:0000
+62    |Info:    [ResourceManager] Registering I2C interface: /dev/i2c-12 Device 8086:4680 Subsystem: 1458:D000
+62    |Info:    ------------------------------------------------------
+62    |Info:    |               Detecting I2C devices                |
+62    |Info:    ------------------------------------------------------
+454   |Info:    ------------------------------------------------------
+454   |Info:    |            Detecting I2C DIMM modules              |
+454   |Info:    ------------------------------------------------------
+518   |Info:    [ResourceManager] Detected occupied slot 2, bus 12, type Key: 6
+578   |Info:    [ResourceManager] Detected occupied slot 4, bus 12, type Key: 6
+578   |Info:    ------------------------------------------------------
+578   |Info:    |               Detecting I2C PCI devices            |
+578   |Info:    ------------------------------------------------------
+579   |Info:    ------------------------------------------------------
+579   |Info:    |               Detecting HID devices                |
+579   |Info:    ------------------------------------------------------
+702   |Info:    [B760M AORUS ELITE AX] Registering RGB controller
+702   |Info:    [Keychron Gaming Keyboard 1] Registering RGB controller
+702   |Info:    ------------------------------------------------------
+702   |Info:    |            Detecting libusb HID devices            |
+702   |Info:    ------------------------------------------------------
+713   |Info:    ------------------------------------------------------
+713   |Info:    |              Detecting other devices               |
+713   |Info:    ------------------------------------------------------
+720   |Info:    [ResourceManager] Calling Post-detection callbacks
+720   |Info:    ------------------------------------------------------
+720   |Info:    |                Detection completed                 |
+720   |Info:    ------------------------------------------------------
+721   |Info:    [ProfileManager] Profile loading: Succeeded for B760M AORUS ELITE AX @ HID: /dev/hidraw4
+721   |Info:    [ProfileManager] Profile loading: FAILED! for Keychron Gaming Keyboard 1 @ HID: /dev/hidraw7

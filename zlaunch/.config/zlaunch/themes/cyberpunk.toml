@@ -14,7 +14,11 @@ window_background = "#0a0e14"
 window_border = "#ff007c"
 window_border_radius = 12.0
 window_border_width = 4.0
-
+# Glow neon SETTINGS
+neon_color = "#00f3ff26"     # màu glow
+neon_glow_size = 8.0       # px
+neon_intensity = 0.8        # 0.0 - 1.0
+neon_frequency = 1.2        # Hz
 # List items
 item_margin_x = 8.0
 item_margin_y = 2.0
