@@ -10,7 +10,7 @@ echo "🚀 Đang bắt đầu thiết lập Dotfiles & LED cho CachyOS... Niri v
 echo "📦 Đang cài đặt các thành phần hệ thống..."
 sudo pacman -S --needed stow openrgb i2c-tools qt5-wayland qt6-wayland waypaper rofi-wayland zed fcitx5-bamboo fcitx5-configtool chromium github-cli -y
 echo "📦 Đang cài đặt zlaunch app launcher AI gemini..."
-paru -S zlaunch
+
 # 2. Thiết lập OpenRGB (Driver & Udev)
 echo "🛠️ Đang cấu hình driver cho LED..."
 
