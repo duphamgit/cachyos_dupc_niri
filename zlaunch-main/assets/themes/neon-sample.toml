@@ -1,0 +1,25 @@
+# Neon sample theme for zlaunch
+# Tweak these values to change the pulsing rim glow and colors.
+
+name = "neon-sample"
+
+# Window background (hex or HSLA). 8-digit hex supports alpha (#RRGGBBAA)
+window_background = "#0a0c0ddd"
+
+# Primary neon color (hex, RGB object, or HSLA object)
+neon_color = "#00e5ff"
+# Secondary neon color for hue blending
+neon_secondary = "#ff3ecb"
+
+# Glow size in pixels (outer halo)
+neon_glow_size = 18.0
+# Simulated border thickness for neon (used via padding)
+neon_border_thickness = 3.0
+
+# Pulse frequency in Hz (how many cycles per second)
+neon_frequency = 1.2
+# Pulse intensity (0.0 - 1.0)
+neon_intensity = 0.92
+
+# You can override any other theme fields; unspecified fields use defaults.
+# Example: to change icon size, add `icon_size = 28.0`

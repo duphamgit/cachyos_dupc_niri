@@ -398,6 +398,9 @@ pub struct LauncherTheme {
     /// Neon accent color for pulsing border/glow
     #[serde(with = "hsla_serde")]
     pub neon_color: Hsla,
+    /// Secondary neon color used to create a moving rim gradient
+    #[serde(with = "hsla_serde")]
+    pub neon_secondary: Hsla,
     /// Size of the soft glow outside the outer border
     #[serde(with = "pixels_serde")]
     pub neon_glow_size: Pixels,
@@ -574,12 +577,13 @@ impl Default for LauncherTheme {
             window_background: hsla(0.0, 0.0, 0.06, 0.7), // ~70% opaque dark
             window_border: hsla(0.0, 0.0, 1.0, 0.094),    // ~9% white
             window_border_radius: px(12.0),
-            // Neon defaults: subtle cyan/blue glow suitable for accent themes
-            neon_color: hsla(200.0 / 360.0, 0.9, 0.55, 1.0),
-            neon_glow_size: px(8.0),
+            // Neon defaults tuned to the mockup: teal/cyan glow with larger halo
+            neon_color: hsla(186.0 / 360.0, 0.88, 0.50, 1.0),
+            neon_secondary: hsla(305.0 / 360.0, 0.82, 0.57, 1.0),
+            neon_glow_size: px(18.0),
             neon_border_thickness: px(3.0),
             neon_frequency: 1.2,
-            neon_intensity: 0.9,
+            neon_intensity: 0.92,
 
             // List items
             item_margin_x: px(8.0),

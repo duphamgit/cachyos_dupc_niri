@@ -9,7 +9,7 @@ use crate::ui::modes::{
 use crate::ui::theme::LauncherTheme;
 use gpui::{
     App, Context, Entity, FocusHandle, Focusable, KeyBinding, Length, ScrollStrategy, Window,
-    actions, div, image_cache, prelude::*, px, retain_all,
+    actions, div, image_cache, prelude::*, px, retain_all, hsla, Hsla,
 };
 use gpui_component::input::InputState;
 use gpui_component::list::{List, ListState};
@@ -874,9 +874,28 @@ impl gpui::Render for LauncherView {
         let neon_base = 0.32_f32; // minimum visible alpha
         let neon_alpha = (neon_base + eased * theme.neon_intensity * (1.0 - neon_base)).min(1.0);
         let neon_accent = theme.neon_color.alpha(neon_alpha);
-        // Soft glow background derived from neon with a smaller base
+        // Soft glow background derived from animated blend between primary and secondary neon
         let neon_bg_alpha = (neon_base * 0.6 + eased * theme.neon_intensity * 0.4).min(0.8);
-        let neon_bg = theme.neon_color.alpha(neon_bg_alpha);
+
+        // Compute a moving rim color by blending neon_color and neon_secondary
+        // use full phase to make hue changes more noticeable
+        let shift = 0.5 + 0.5 * (phase.sin());
+        let mix_hsla = |a: Hsla, b: Hsla, t: f32| {
+            let mut dh = b.h - a.h;
+            if dh.abs() > 0.5 {
+                if dh > 0.0 { dh -= 1.0 } else { dh += 1.0 }
+            }
+            let h = (a.h + dh * t + 1.0) % 1.0;
+            let s = a.s + (b.s - a.s) * t;
+            let l = a.l + (b.l - a.l) * t;
+            let aa = a.a + (b.a - a.a) * t;
+            hsla(h, s, l, aa)
+        };
+
+        // Animated blended color (primary rim color) — used for both halo layers with different alphas
+        let blended = mix_hsla(theme.neon_color, theme.neon_secondary, shift);
+        let neon_bg = blended.alpha(neon_bg_alpha);
+        let rim_color = blended.alpha(neon_alpha);
 
         // Input prefix (search icon or back button)
         let input_prefix = match self.view_mode {
@@ -1031,7 +1050,7 @@ impl gpui::Render for LauncherView {
                 on_hide();
             })
             // Simplified launcher panel: no static borders or glow — hover/selection remain
-            // Wrapper providing a soft neon halo when hovered
+            // Wrapper providing a soft neon halo when hovered — two nested halo layers
             .child(
                 div()
                     .rounded(theme.window_border_radius + theme.neon_glow_size)
@@ -1039,47 +1058,52 @@ impl gpui::Render for LauncherView {
                     .bg(if self.panel_hovered { neon_bg } else { theme.window_background.alpha(0.0) })
                     .child(
                         div()
-                            .id("launcher-panel")
-                            .w(px(config.window_width))
-                            .h(px(config.window_height))
-                            .flex()
-                            .flex_col()
-                            // Add a subtle border always; brighten using neon on hover
-                            .border_1()
-                            .border_color(if self.panel_hovered {
-                                neon_accent
-                            } else {
-                                theme.window_border
-                            })
-                            .rounded(theme.window_border_radius)
-                            .bg(if config.enable_transparency {
-                                theme.window_background
-                            } else {
-                                theme.window_background.alpha(1.0)
-                            })
-                            .overflow_hidden()
-                            // Stop click propagation to backdrop
-                            .on_mouse_down(gpui::MouseButton::Left, |_event, _window, cx| {
-                                cx.stop_propagation();
-                            })
-                            // Panel hover is always enabled (glow shown even without mouse)
-                            // Input section
+                            .rounded(theme.window_border_radius + theme.neon_glow_size / 2.0)
+                            .p(theme.neon_glow_size * 0.5)
+                            .bg(rim_color.alpha((neon_bg_alpha * 0.65).min(0.8)))
                             .child(
                                 div()
-                                    .w_full()
-                                    .px_2()
-                                    .py_3()
-                                    .border_b_1()
-                                    .border_color(cx.theme().muted_foreground)
+                                    .id("launcher-panel")
+                                    .w(px(config.window_width))
+                                    .h(px(config.window_height))
+                                    .flex()
+                                    .flex_col()
+                                    // subtle inner border; keep neon accent but low alpha
+                                    .border_1()
+                                    .border_color(if self.panel_hovered {
+                                        neon_accent.alpha(0.28)
+                                    } else {
+                                        theme.window_border
+                                    })
+                                    .rounded(theme.window_border_radius)
+                                    .bg(if config.enable_transparency {
+                                        theme.window_background
+                                    } else {
+                                        theme.window_background.alpha(1.0)
+                                    })
+                                    .overflow_hidden()
+                                    // Stop click propagation to backdrop
+                                    .on_mouse_down(gpui::MouseButton::Left, |_event, _window, cx| {
+                                        cx.stop_propagation();
+                                    })
+                                    // Input section
                                     .child(
-                                        gpui_component::input::Input::new(&self.input_state)
-                                            .appearance(false)
-                                            .cleanable(true)
-                                            .prefix(input_prefix),
-                                    ),
-                            )
-                            // List content
-                            .child(list_content),
+                                        div()
+                                            .w_full()
+                                            .px_2()
+                                            .py_3()
+                                            .border_b_1()
+                                            .border_color(cx.theme().muted_foreground)
+                                            .child(
+                                                gpui_component::input::Input::new(&self.input_state)
+                                                    .appearance(false)
+                                                    .cleanable(true)
+                                                    .prefix(input_prefix),
+                                            ),
+                                    )
+                                    // List content
+                                    .child(list_content),
+                            ),
                     ),
             )
     }
